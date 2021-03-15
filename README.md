@@ -1,4 +1,5 @@
 # Auto Escola Nascimento
+![CircleCI](https://img.shields.io/circleci/build/github/Danielpernnasc/react-autoescolanascimento)
 
 Este projeto foi desenvolvido durante o curso [React Profissional](http://nardiniacademy.com)
 
