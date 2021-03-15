@@ -12,7 +12,7 @@ jobs:
       - run: yarn --version
       - node/install-packages:
           pkg-manager: yarn
-            - run: yarn lint
+      - run: yarn lint
 
 workflows:
   ci:
