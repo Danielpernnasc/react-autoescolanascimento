@@ -4,7 +4,7 @@ Este projeto foi desenvolvido durante o curso [React Profissional](http://nardin
 
 Resultado final:
 
-# Meu projeto
+# Esse é Meu projeto
 - [Demonstração online do projeto](https://autoescolanasc.vercel.app/)
 
 # Meu chromatic
