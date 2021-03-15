@@ -1,0 +1,18 @@
+version: 2.1
+  
+  orbs:
+    node: circleci/node@4.0.2
+  
+  jobs: 
+    setup:
+      docker:
+        - image: circleci/node:14.16.0-browsers
+      steps:
+        - checkout
+        - node/install:
+            install-yarn: true
+        - run: node --version
+        - run: yarn --version
+  workflows:
+      ci:
+        -setup
