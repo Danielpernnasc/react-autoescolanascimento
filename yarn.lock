@@ -1785,9 +1785,9 @@
   integrity sha512-NxF1yfYOUO92rCx3dwvA2onF30Vdlg7YUkMVXkeptqpzA3tRLplThhFleV/UKWFgh7rpKu1yYRbvNDUtzSopKA==
 
 "@octokit/plugin-paginate-rest@^2.2.3":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@octokit/plugin-paginate-rest/-/plugin-paginate-rest-2.11.0.tgz#3568c43896a3355f4a0bbb3a64f443b2abdc760d"
-  integrity sha512-7L9xQank2G3r1dGqrVPo1z62V5utbykOUzlmNHPz87Pww/JpZQ9KyG5CHtUzgmB4n5iDRKYNK/86A8D98HP0yA==
+  version "2.13.2"
+  resolved "https://registry.yarnpkg.com/@octokit/plugin-paginate-rest/-/plugin-paginate-rest-2.13.2.tgz#7b8244a0dd7a31135ba2adc58a533213837bfe87"
+  integrity sha512-mjfBcla00UNS4EI/NN7toEbUM45ow3kk4go+LxsXAFLQodsrXcIZbftUhXTqi6ZKd+r6bcqMI+Lv4dshLtFjww==
   dependencies:
     "@octokit/types" "^6.11.0"
 
@@ -4894,10 +4894,10 @@ chownr@^2.0.0:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
 
-chromatic@^5.6.3:
-  version "5.6.3"
-  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-5.6.3.tgz#5b1ef3a9ff60b617f9ee1397921951e6e2f08a8c"
-  integrity sha512-GjTWCxXD8bbOAIH8rPxIB0O96temNLis2fyCFHNwaSX762xx7mdZr8R6aEkBVjYVP5gY/l6tszPpMeCav6bNiQ==
+chromatic@^5.7.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-5.7.0.tgz#2e3cf1edb32da2c65547ca7809a516ce8aea5039"
+  integrity sha512-vcHNFTzjJGwlIDLzrR9lhIaCsxgUtyBQPPxn/+cFu9fLXox28Zgsfv0ccK5/gRc4fM5aF/ePMkdpgzVzEuyfuA==
   dependencies:
     "@actions/core" "^1.2.4"
     "@actions/github" "^4.0.0"
@@ -15689,9 +15689,9 @@ yargs-parser@^18.1.2:
     decamelize "^1.2.0"
 
 yargs-parser@^20.2.2, yargs-parser@^20.2.3:
-  version "20.2.6"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.6.tgz#69f920addf61aafc0b8b89002f5d66e28f2d8b20"
-  integrity sha512-AP1+fQIWSM/sMiET8fyayjx/J+JmTPt2Mr0FkrgqB4todtfa53sOsrSAcIrJRD5XS20bKUwaDIuMkWKCEiQLKA==
+  version "20.2.7"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.7.tgz#61df85c113edfb5a7a4e36eb8aa60ef423cbc90a"
+  integrity sha512-FiNkvbeHzB/syOjIUxFDCnhSfzAL8R5vs40MgLFBorXACCOAEaWu0gRZl14vG8MR9AOJIZbmkjhusqBYZ3HTHw==
 
 yargs@16.2.0:
   version "16.2.0"
