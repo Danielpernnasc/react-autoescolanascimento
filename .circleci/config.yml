@@ -18,8 +18,21 @@ jobs:
       - run: yarn cover
       - codecov/upload:
           file: coverage/*.json
-
+  versioning: 
+    docker: 
+      - image: circleci/node:14.16.0-browsers
+    steps:
+      - checkout
+      - run: 
+          name: Check package version
+          command: node scripts/check-version Danielpernnasc react-autoescolanascimento  
 workflows:
   ci:
     jobs:
       - tests
+      - versioning:
+          filter:
+            branches:
+              ignore: main
+            tags: 
+              ignore: /.*/
