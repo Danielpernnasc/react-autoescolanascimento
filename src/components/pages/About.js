@@ -54,8 +54,7 @@ const About = () => {
         </Heading>
         <BreadCrumb items={[
           { label: "Início", link: "/" }, 
-          { label: "Sobre" },
-          { label: "Serviços", link: "/Servicos" }
+          { label: "Sobre" }
         ]} />
       </Hero>
       <Section>

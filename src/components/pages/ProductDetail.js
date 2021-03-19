@@ -50,8 +50,8 @@ const ProductDetail = () => {
         </Heading>
         <BreadCrumb items={[
               { label: "Início", link: "/" }, 
-              { label: "Sobre", link: "/Sobre" },
-              { label: "Serviço" }
+              { label: "Serviço" },
+              { label: "Nome do Serviço" }
         ]}/>
     </Hero>
     <Section>

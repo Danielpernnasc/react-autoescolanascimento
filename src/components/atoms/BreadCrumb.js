@@ -12,10 +12,11 @@ const Item = styled.span`
     font-size: 20px;
     font-weight: 300;
     text-decoration: none;
+    color: #fff;
 
     ${props => props.isClickable && css`
         cursor: pointer;
-        color: ${props => props.theme.colors.primary.main};
+        &:hover {color: ${props => props.theme.colors.primary.main};}
     `} 
 
     &:not(:first-child) {
