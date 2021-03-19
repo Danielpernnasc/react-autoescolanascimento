@@ -5,6 +5,7 @@ import GlobaSytle from "./styles/GlobalStyle";
 
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
+import Product from './components/pages/ProductDetail';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/Sobre" element={<About/>} />
+          <Route path="/Servicos" element={<Product/>} />
         </Routes>
       </Router>
     </ThemeProvider>

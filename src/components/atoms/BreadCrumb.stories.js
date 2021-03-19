@@ -9,7 +9,9 @@ export default {
 
 const items = [
     { label: "Início", link: "/" }, 
-    { label: "Sobre" }
+    { label: "Sobre" },
+    { label: "Servico" }
+
 ];
 
 export const usage = () => 

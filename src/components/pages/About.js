@@ -1,4 +1,4 @@
-import React, { useEffect, UseEffetct } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -9,6 +9,8 @@ import Grid from "../atoms/Grid";
 import Footer from "../organism/Footer";
 import Card, {CardMedia, CardMediaDescription } from "../atoms/Card";
 import BreadCrumb from "../atoms/BreadCrumb";
+
+import { useScrollToTop } from "../../Hooks/scroll";
 
 import HeroImage from "../../assets/hero.jpg";
 import AboutImage from "../../draws/Transito";
@@ -39,11 +41,10 @@ const instructors = [
 
 ]
 
+
 const About = () => {
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  useScrollToTop();
 
   return (
     <>
@@ -53,7 +54,8 @@ const About = () => {
         </Heading>
         <BreadCrumb items={[
           { label: "Início", link: "/" }, 
-          { label: "Sobre" }
+          { label: "Sobre" },
+          { label: "Serviços", link: "/Servicos" }
         ]} />
       </Hero>
       <Section>

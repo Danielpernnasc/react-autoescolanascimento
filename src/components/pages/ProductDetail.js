@@ -3,10 +3,13 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import {FaIdCard, FaHome, FaScroll} from "react-icons/fa";
 
+import { useScrollToTop } from "../../Hooks/scroll";
+
 import Hero from "../molecules/Hero";
 import Heading from "../atoms/Heading";
 import Section from "../molecules/Section";
 import Footer from "../organism/Footer";
+import BreadCrumb from "../atoms/BreadCrumb";
 
 import HeroImage from "../../assets/hero.jpg"
 import  Callout, {
@@ -35,12 +38,21 @@ const PinnedItem = styled.li`
 
 `;
 
-const ProductDetail = () => (
+const ProductDetail = () => {
+    useScrollToTop();
+
+    return (
+      
     <>
     <Hero image={HeroImage}>
         <Heading>
-            <h1>Nome do serviço</h1>
+            <h1>Nosso Serviços</h1>
         </Heading>
+        <BreadCrumb items={[
+              { label: "Início", link: "/" }, 
+              { label: "Sobre", link: "/Sobre" },
+              { label: "Serviço" }
+        ]}/>
     </Hero>
     <Section>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor porro magni harum obcaecati. Dicta libero expedita excepturi, voluptate ut et minima aliquam cum dolorem. Consequuntur sapiente iure tenetur dolorum repellendus!</p>
@@ -83,7 +95,7 @@ const ProductDetail = () => (
     <Footer/>
     </>
 );
-
+};
 ProductDetail.defaultProps = {};
 
 ProductDetail.propTypes = {};
