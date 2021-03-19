@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import {FaIdCard, FaHome, FaScroll} from "react-icons/fa";
 
 import Hero from "../molecules/Hero";
 import Heading from "../atoms/Heading";
 import Section from "../molecules/Section";
-import Grid from "../atoms/Grid";
 import Footer from "../organism/Footer";
 
 import HeroImage from "../../assets/hero.jpg"
@@ -14,6 +15,25 @@ import  Callout, {
     CalloutAction } from "../atoms/Callout";
 import Button from "../atoms/Button";
 import SpeedImage from "../../draws/Speed";
+
+const PinnedList = styled.ul`
+    list-style: none;
+    padding-left: 0;
+`;
+
+const PinnedItem = styled.li`
+    display: inline-block;
+    border: 1px solid ${props => props.theme.colors.border};
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin: 0 16px 16px 0;
+
+    svg {
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+`;
 
 const ProductDetail = () => (
     <>
@@ -27,6 +47,24 @@ const ProductDetail = () => (
         <p>Cupiditate tempora quos sit molestias id tenetur blanditiis. Architecto quod, voluptas, quasi repellendus quis beatae distinctio veritatis dignissimos vel magnam ea temporibus reprehenderit voluptate aperiam tempore eos aliquam nemo. Reprehenderit.</p>
         <p>Distinctio optio, animi sapiente a expedita praesentium quod. Fuga alias labore sapiente eum dolor numquam corporis voluptates, vitae mollitia maiores cumque quisquam, facilis non! Minus, voluptates. Ipsum officiis eaque eos!</p>
         <h5>Documentos necessários:</h5>
+        <PinnedList>
+            <PinnedItem>
+                <FaIdCard/>
+                    RG
+            </PinnedItem>
+            <PinnedItem>
+                <FaIdCard/> 
+                CPF
+            </PinnedItem>
+            <PinnedItem>
+                <FaScroll/> 
+                Cert. Nascimento ou Casamento
+            </PinnedItem>
+            <PinnedItem>
+                <FaHome/>
+                Compr. Residência
+            </PinnedItem>
+        </PinnedList>
     </Section>
     <Section inverse>
         <Callout>
@@ -42,6 +80,7 @@ const ProductDetail = () => (
             </CalloutMedia>
         </Callout>
     </Section>
+    <Footer/>
     </>
 );
 
