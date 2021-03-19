@@ -23,43 +23,73 @@ CardBody.propTypes = {
 //#endregion
 
 //#region CardMedia
-const StyledMedia = styled.div`
-  background-image: url(${props => props.image});
-  background-position: center center;
-  background-size: cover;
-  height: 270px;
-`;
+  const StyledMedia = styled.div`
+    display: flex;
+    background-image: url(${props => props.image});
+    background-position: center center;
+    background-size: cover;
+    height: 270px;
+  `;
 
-export const CardMedia = ({ image }) => <StyledMedia image={image} />;
+  export const CardMedia = ({ image, children }) => <StyledMedia image={image}>{children}</StyledMedia>;
 
-CardMedia.defaultProps = {
-  image: undefined
-};
+  CardMedia.defaultProps = {
+    image: undefined,
+    children: undefined,
+  };
 
-CardMedia.propTypes = {
-  image: PropTypes.string
-};
+  CardMedia.propTypes = {
+    image: PropTypes.string,
+    children: PropTypes.node,
+
+  };
+
+//#endregion
+
+//#region CardMediaDescription
+  const StyledMediaDescription = styled.div`
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 8px 16px;
+      color: #fff;
+      align-self: flex-end;
+      flex: 1;
+
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+      }
+    `;
+
+    export const CardMediaDescription = ({ children }) => <StyledMediaDescription>{children}</StyledMediaDescription>;
+
+    CardMediaDescription.defaultProps = {
+      image: undefined
+    };
+
+    CardMediaDescription.propTypes = {
+      children: PropTypes.node,
+    };
+
 
 //#endregion
 
 //#region Card
 
-const StyledCard = styled.div`
-  background-color: #fff;
-  border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  overflow: hidden;
-`;
+  const StyledCard = styled.div`
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    overflow: hidden;
+  `;
 
-const Card = ({ children }) => <StyledCard>{children}</StyledCard>;
+  const Card = ({ children }) => <StyledCard>{children}</StyledCard>;
 
-Card.defaultProps = {
-  children: undefined
-};
+  Card.defaultProps = {
+    children: undefined
+  };
 
-Card.propTypes = {
-  children: PropTypes.node
-};
+  Card.propTypes = {
+    children: PropTypes.node
+  };
 
-export default Card;
+  export default Card;
 //#endregion
