@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, UseEffetct } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -8,6 +8,7 @@ import Section from "../molecules/Section";
 import Grid from "../atoms/Grid";
 import Footer from "../organism/Footer";
 import Card, {CardMedia, CardMediaDescription } from "../atoms/Card";
+import BreadCrumb from "../atoms/BreadCrumb";
 
 import HeroImage from "../../assets/hero.jpg";
 import AboutImage from "../../draws/Transito";
@@ -38,70 +39,81 @@ const instructors = [
 
 ]
 
-const About = () => (
-  <>
-    <Hero image={HeroImage}>
-      <Heading>
-        <h1>Auto Escola Nascimento</h1>
-      </Heading>
-    </Hero>
-    <Section>
-      <Grid md={2}>
-        <div>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius id maiores similique deserunt vel possimus, earum molestias animi incidunt aspernatur et consequuntur recusandae ad, sint atque exercitationem eaque nihil. Omnis.</p>
-          <p>Impedit cum laudantium dignissimos illum sunt explicabo eligendi velit nemo dolorum veniam tenetur aliquid, iusto voluptate repudiandae sapiente sequi rerum sint alias. Eaque architecto voluptatibus voluptate labore excepturi maxime ab.</p>
-          <p>Voluptatibus, sit? Eum, ducimus laudantium? Nobis ducimus distinctio reiciendis totam nesciunt! Voluptatibus dolor nobis, aut molestiae rerum ea cum alias eveniet nulla consequatur in laudantium quas dolore, quam iusto quae.</p>
-          <ul>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-          </ul>
-        </div>
-        <div>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit consequuntur, vitae minus fugit possimus cupiditate laboriosam doloremque recusandae.</p>
-          <center>
-            <ImageContainer>
-              <AboutImage />
-            </ImageContainer>
-          </center>
-        </div>
-      </Grid>
-    </Section>
-    <Section inverse>
+const About = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <>
+      <Hero image={HeroImage}>
+        <Heading>
+          <h1>Auto Escola Nascimento</h1>
+        </Heading>
+        <BreadCrumb items={[
+          { label: "Início", link: "/" }, 
+          { label: "Sobre" }
+        ]} />
+      </Hero>
+      <Section>
         <Grid md={2}>
           <div>
-            <h4>Missão</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aut tenetur doloribus eaque dolores ex amet fuga, dignissimos ratione ducimus itaque, ad commodi maiores asperiores. Magni, ducimus. Quisquam, reiciendis totam.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius id maiores similique deserunt vel possimus, earum molestias animi incidunt aspernatur et consequuntur recusandae ad, sint atque exercitationem eaque nihil. Omnis.</p>
+            <p>Impedit cum laudantium dignissimos illum sunt explicabo eligendi velit nemo dolorum veniam tenetur aliquid, iusto voluptate repudiandae sapiente sequi rerum sint alias. Eaque architecto voluptatibus voluptate labore excepturi maxime ab.</p>
+            <p>Voluptatibus, sit? Eum, ducimus laudantium? Nobis ducimus distinctio reiciendis totam nesciunt! Voluptatibus dolor nobis, aut molestiae rerum ea cum alias eveniet nulla consequatur in laudantium quas dolore, quam iusto quae.</p>
+            <ul>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
           </div>
           <div>
-            <h4>Visão</h4>
-            <p>Mollitia ex in aliquid nobis praesentium similique debitis porro eveniet veniam, minima qui pariatur libero eos corrupti doloribus, expedita natus sed? Molestias eum eligendi quia velit maiores nam consectetur dolore?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit consequuntur, vitae minus fugit possimus cupiditate laboriosam doloremque recusandae.</p>
+            <center>
+              <ImageContainer>
+                <AboutImage />
+              </ImageContainer>
+            </center>
           </div>
         </Grid>
-    </Section>
-    <Section>
-      <Heading>
-        <h2>Conheça nossos professores</h2>
-      </Heading>
-      <Grid sm={2} md={3} lg={4}>
-        {instructors.map((instructor) => (
-          <Card key={instructor.id}>
-            <CardMedia image={instructor.avatar}>
-              <CardMediaDescription>
-                <h5>
-                  {instructor.name}
-                </h5>
-              </CardMediaDescription>
-            </CardMedia>
-          </Card>
-        ))}
-      </Grid>
-    </Section>
-    <Footer />
-  </> 
-);
+      </Section>
+      <Section inverse>
+          <Grid md={2}>
+            <div>
+              <h4>Missão</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aut tenetur doloribus eaque dolores ex amet fuga, dignissimos ratione ducimus itaque, ad commodi maiores asperiores. Magni, ducimus. Quisquam, reiciendis totam.</p>
+            </div>
+            <div>
+              <h4>Visão</h4>
+              <p>Mollitia ex in aliquid nobis praesentium similique debitis porro eveniet veniam, minima qui pariatur libero eos corrupti doloribus, expedita natus sed? Molestias eum eligendi quia velit maiores nam consectetur dolore?</p>
+            </div>
+          </Grid>
+      </Section>
+      <Section>
+        <Heading>
+          <h2>Conheça nossos professores</h2>
+        </Heading>
+        <Grid sm={2} md={3} lg={4}>
+          {instructors.map((instructor) => (
+            <Card key={instructor.id}>
+              <CardMedia image={instructor.avatar}>
+                <CardMediaDescription>
+                  <h5>
+                    {instructor.name}
+                  </h5>
+                </CardMediaDescription>
+              </CardMedia>
+            </Card>
+          ))}
+        </Grid>
+      </Section>
+      <Footer />
+    </> 
+  );
+};
 
 About.defaultProps = {};
 
