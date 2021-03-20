@@ -38,6 +38,7 @@ jobs:
           command: node scripts/check-version Danielpernnasc react-autoescolanascimento  
 workflows:
   ci:
+    yarn run build
     jobs:
       - tests
       - versioning:
