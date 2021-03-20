@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
-import styled from "styled-components";
 
 import Grid from "../atoms/Grid";
 import Card, { CardMedia, CardBody } from "../atoms/Card";
 import Heading from "../atoms/Heading";
 import Button from "../atoms/Button";
 
-
-
+import styled from "styled-components";
 
 const Toolbar = styled.div`
   margin-top: 40px;
@@ -21,7 +19,6 @@ const ProductGrid = ({ products }) => {
   const filteredProducts = showAll ? products : products.slice(0, 3);
 
   return (
-
     <>
       <Grid md={3}>
         {filteredProducts.map(product => (
@@ -34,7 +31,7 @@ const ProductGrid = ({ products }) => {
                 </Heading>
                 <p>{product.summary}</p>
                 <div>
-                  <Button color="primary" variant="link" as={Link} to="/Servicos">
+                  <Button as={Link} to="/Servicos" color="primary" variant="link">
                     Saiba mais
                   </Button>
                 </div>
