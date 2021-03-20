@@ -17,33 +17,32 @@ jobs:
             yarn --version
       - node/install-packages:
           pkg-manager: yarn
-      - run: 
+      - run:
           name: Run lint check
           command: yarn lint
-      - run: 
+      - run:
           name: Run unit test coverage
           command: yarn cover
       - codecov/upload:
           file: coverage/*.json
-      - run: 
+      - run:
           name: Publish to Chromatic
           command: yarn chromatic --project-token=${CHROMATIC_TOKEN}
-  versioning: 
-    docker: 
+  versioning:
+    docker:
       - image: circleci/node:14.16.0
     steps:
       - checkout
-      - run: 
+      - run:
           name: Check package version
-          command: node scripts/check-version Danielpernnasc react-autoescolanascimento  
+          command: node scripts/check-version Danielpernnasc react-autoescolanascimento
 workflows:
   ci:
-    yarn run build
     jobs:
       - tests
       - versioning:
           filters:
             branches:
               ignore: main
-            tags: 
+            tags:
               ignore: /.*/

@@ -8,7 +8,7 @@ import Section from "../molecules/Section";
 import Grid from "../atoms/Grid";
 import Footer from "../organism/Footer";
 import Card, {CardMedia, CardMediaDescription } from "../atoms/Card";
-
+import BreadCrumb from "../atoms/BreadCrumb";
 
 import { useScrollToTop } from "../../Hooks/scroll";
 
@@ -52,7 +52,10 @@ const About = () => {
         <Heading>
           <h1>Auto Escola Nascimento</h1>
         </Heading>
-
+        <BreadCrumb items={[
+          { label: "Início", link: "/" }, 
+          { label: "Sobre" }
+        ]} />
       </Hero>
       <Section>
         <Grid md={2}>
