@@ -1,6 +1,6 @@
 import React from "react";
 
-import Card, { CardBody, CardMedia } from "./Card";
+import Card, { CardBody, CardMedia, CardMediaDescription } from "./Card";
 import Section from "../molecules/Section";
 
 import Heading from "./Heading";
@@ -51,6 +51,19 @@ export const withMedia = () => (
           </Button>
         </div>
       </CardBody>
+    </Card>
+  </Section>
+);
+
+
+export const onlyMedia = () => (
+  <Section inverse>
+    <Card>
+      <CardMedia image={PlaceholderImage}>
+        <CardMediaDescription>
+          <h5>Descrição da Imagem</h5>
+        </CardMediaDescription>
+      </CardMedia>
     </Card>
   </Section>
 );
