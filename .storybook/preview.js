@@ -2,7 +2,7 @@ import React from "react";
 
 import { addDecorator, addParameters } from "@storybook/react";
 import { select } from "@storybook/addon-knobs";
-import { BrowserRouter as Router} from "react-router-dom";
+import { MermoryRouter as Router} from "react-router-dom";
 
 import GlobalStyle from "../src/styles/GlobalStyle";
 
