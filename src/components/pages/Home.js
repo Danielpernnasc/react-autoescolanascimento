@@ -122,6 +122,7 @@ const Home = () => (
             autoPlay
             loop
             muted
+            playsInline
             alt="Video by Ruvim Miksanskiy from Pexels"
           ></video>
         </div>
