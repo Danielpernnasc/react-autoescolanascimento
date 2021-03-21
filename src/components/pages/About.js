@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import Hero from "../molecules/Hero";
@@ -116,8 +115,8 @@ const About = () => {
   );
 };
 
-About.defaultProps = {};
+// About.defaultProps = {};
 
-About.propTypes = {};
+// About.propTypes = {};
 
 export default About
