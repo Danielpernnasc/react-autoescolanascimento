@@ -84,6 +84,10 @@ const Button = styled.button`
     background-color: ${getDarkColor};
     border: ${getDarkColor};
   }
+
+  &:focus:enabled {
+    outline-style: none;
+  }
 `;
 
 const ButtonOutlined = styled(Button)`
@@ -95,6 +99,7 @@ const ButtonOutlined = styled(Button)`
     color: ${getDarkColor};
     border: solid 2px ${getDarkColor};
   }
+
 `;
 
 const ButtonLink = styled(Button)`
@@ -104,7 +109,7 @@ const ButtonLink = styled(Button)`
   padding-left: 0;
   padding-right: 0;
 
-  &:hover:enabled {
+  &:hover:not(:disabled){
     background-color: transparent;
     border-color: transparent;
     color: ${getDarkColor};
