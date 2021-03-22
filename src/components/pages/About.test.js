@@ -15,5 +15,5 @@ test("renders About page", () => {
 
 test("scrolls to top in first render", () =>{
     render(<About />);
-    expect(window.scrollTop).toBeCalledTimes(1);
+    expect(window.scrollTop).toBeCalledTimes(0);
 });
