@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+// import PropTypes from "prop-types";
 
 import Hero from "../molecules/Hero";
 import Heading from "../atoms/Heading";
@@ -8,8 +9,6 @@ import Grid from "../atoms/Grid";
 import Footer from "../organism/Footer";
 import Card, {CardMedia, CardMediaDescription } from "../atoms/Card";
 import BreadCrumb from "../atoms/BreadCrumb";
-
-import { useScrollToTop } from "../../Hooks/scroll";
 
 import HeroImage from "../../assets/hero.jpg";
 import AboutImage from "../../draws/Transito";
@@ -41,11 +40,7 @@ const instructors = [
 ]
 
 
-const About = () => {
-
-  useScrollToTop();
-
-  return (
+const About = () => (
     <>
       <Hero image={HeroImage}>
         <Heading>
@@ -113,8 +108,6 @@ const About = () => {
       <Footer />
     </> 
   );
-};
-
 // About.defaultProps = {};
 
 // About.propTypes = {};
