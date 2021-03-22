@@ -40,7 +40,8 @@ const instructors = [
 ]
 
 
-const About = () => (
+const About = () => {
+  return (
     <>
       <Hero image={HeroImage}>
         <Heading>
@@ -108,6 +109,7 @@ const About = () => (
       <Footer />
     </> 
   );
+}
 // About.defaultProps = {};
 
 // About.propTypes = {};

@@ -1,8 +1,10 @@
 import React from "react";
 
+import { useScrollToTop } from "../Hooks/scroll";
+
 import AboutPage from "../components/pages/About";
 
-import { useScrollToTop } from "../Hooks/scroll";
+
 
 const About = () => {
 
