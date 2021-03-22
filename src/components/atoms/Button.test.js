@@ -19,35 +19,32 @@ test("trigger event on click", () => {
   expect(handleClick).toBeCalled();
 });
 
-test.each(Object.values(ButtonColors).map(item => [item]))(
+test.each(Object.values(ButtonColors).map((item) => [item]))(
   "renders with color %s",
-  color => {
+  (color) => {
     const { asFragment } = render(<Button color={color} />);
 
     expect(asFragment()).toMatchSnapshot();
   }
 );
 
-test.each(Object.values(ButtonsVariants).map(item => [item]))(
-  "renders with variants %s",
-  variants => {
-    const { asFragment } = render(<Button variants={variants} />);
+test.each(Object.values(ButtonsVariants).map((item) => [item]))(
+  "renders with variant %s",
+  (variant) => {
+    const { asFragment } = render(<Button variant={variant} />);
 
     expect(asFragment()).toMatchSnapshot();
   }
 );
 
-test("renders with color primay and variant outlined", () => {
-  const { asFragment } = render(<Button variants="outlined" color="primary" />);
+test("renders with color primary and variant outlined", () => {
+  const { asFragment } = render(<Button variant="outlined" color="primary" />);
 
   expect(asFragment()).toMatchSnapshot();
 });
 
-test("renders with color primary and link", ()  => {
-  const { asFragment } = render(<Button variants="link" color="primary"/>);
+test("renders with color primary and variant link", () => {
+  const { asFragment } = render(<Button variant="link" color="primary" />);
 
   expect(asFragment()).toMatchSnapshot();
 });
-
-
-

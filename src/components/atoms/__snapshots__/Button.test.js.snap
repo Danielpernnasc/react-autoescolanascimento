@@ -11,9 +11,6 @@ exports[`renders with color danger 1`] = `
   background-color: #ff3d00;
   border: 2px solid #ff3d00;
   color: #212121;
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0:disabled {
@@ -21,9 +18,9 @@ exports[`renders with color danger 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background-color: #b22a00;
-  border: #b22a00;
+  border-color: #b22a00;
 }
 
 .c0:focus:enabled {
@@ -49,9 +46,6 @@ exports[`renders with color default 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0:disabled {
@@ -59,9 +53,9 @@ exports[`renders with color default 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background-color: #5a6268;
-  border: #5a6268;
+  border-color: #5a6268;
 }
 
 .c0:focus:enabled {
@@ -87,9 +81,6 @@ exports[`renders with color primary 1`] = `
   background-color: #ffc107;
   border: 2px solid #ffc107;
   color: #212121;
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0:disabled {
@@ -97,9 +88,9 @@ exports[`renders with color primary 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background-color: #c79100;
-  border: #c79100;
+  border-color: #c79100;
 }
 
 .c0:focus:enabled {
@@ -114,7 +105,7 @@ exports[`renders with color primary 1`] = `
 </DocumentFragment>
 `;
 
-exports[`renders with color primary and link 1`] = `
+exports[`renders with color primary and variant link 1`] = `
 <DocumentFragment>
   .c0 {
   font-size: 1rem;
@@ -125,9 +116,6 @@ exports[`renders with color primary and link 1`] = `
   background-color: #ffc107;
   border: 2px solid #ffc107;
   color: #212121;
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0:disabled {
@@ -135,24 +123,38 @@ exports[`renders with color primary and link 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background-color: #c79100;
-  border: #c79100;
+  border-color: #c79100;
 }
 
 .c0:focus:enabled {
   outline-style: none;
 }
 
+.c1 {
+  background-color: transparent;
+  border-color: transparent;
+  color: #ffc107;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.c1:hover:enabled {
+  background-color: transparent;
+  border-color: transparent;
+  color: #c79100;
+}
+
 <button
-    class="c0"
+    class="c0 c1"
     color="primary"
     type="button"
   />
 </DocumentFragment>
 `;
 
-exports[`renders with color primay and variant outlined 1`] = `
+exports[`renders with color primary and variant outlined 1`] = `
 <DocumentFragment>
   .c0 {
   font-size: 1rem;
@@ -163,9 +165,6 @@ exports[`renders with color primay and variant outlined 1`] = `
   background-color: #ffc107;
   border: 2px solid #ffc107;
   color: #212121;
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0:disabled {
@@ -173,24 +172,34 @@ exports[`renders with color primay and variant outlined 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background-color: #c79100;
-  border: #c79100;
+  border-color: #c79100;
 }
 
 .c0:focus:enabled {
   outline-style: none;
 }
 
+.c1 {
+  background-color: transparent;
+  color: #ffc107;
+}
+
+.c1:hover:enabled {
+  background-color: transparent;
+  color: #c79100;
+}
+
 <button
-    class="c0"
+    class="c0 c1"
     color="primary"
     type="button"
   />
 </DocumentFragment>
 `;
 
-exports[`renders with variants default 1`] = `
+exports[`renders with variant default 1`] = `
 <DocumentFragment>
   .c0 {
   font-size: 1rem;
@@ -201,9 +210,6 @@ exports[`renders with variants default 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0:disabled {
@@ -211,9 +217,9 @@ exports[`renders with variants default 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background-color: #5a6268;
-  border: #5a6268;
+  border-color: #5a6268;
 }
 
 .c0:focus:enabled {
@@ -228,7 +234,7 @@ exports[`renders with variants default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`renders with variants link 1`] = `
+exports[`renders with variant link 1`] = `
 <DocumentFragment>
   .c0 {
   font-size: 1rem;
@@ -239,9 +245,6 @@ exports[`renders with variants link 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0:disabled {
@@ -249,24 +252,38 @@ exports[`renders with variants link 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background-color: #5a6268;
-  border: #5a6268;
+  border-color: #5a6268;
 }
 
 .c0:focus:enabled {
   outline-style: none;
 }
 
+.c1 {
+  background-color: transparent;
+  border-color: transparent;
+  color: #757575;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.c1:hover:enabled {
+  background-color: transparent;
+  border-color: transparent;
+  color: #5a6268;
+}
+
 <button
-    class="c0"
+    class="c0 c1"
     color="default"
     type="button"
   />
 </DocumentFragment>
 `;
 
-exports[`renders with variants outlined 1`] = `
+exports[`renders with variant outlined 1`] = `
 <DocumentFragment>
   .c0 {
   font-size: 1rem;
@@ -277,9 +294,6 @@ exports[`renders with variants outlined 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0:disabled {
@@ -287,17 +301,27 @@ exports[`renders with variants outlined 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background-color: #5a6268;
-  border: #5a6268;
+  border-color: #5a6268;
 }
 
 .c0:focus:enabled {
   outline-style: none;
 }
 
+.c1 {
+  background-color: transparent;
+  color: #212121;
+}
+
+.c1:hover:enabled {
+  background-color: transparent;
+  color: #5a6268;
+}
+
 <button
-    class="c0"
+    class="c0 c1"
     color="default"
     type="button"
   />
