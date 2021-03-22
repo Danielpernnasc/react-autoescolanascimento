@@ -1,6 +1,6 @@
 {
   "name": "autoescola-nascimento",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@storybook/addon-docs": "^6.1.17",
@@ -34,8 +34,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "chromatic --exit-zero-on-changes",
-    "lint": "eslint src/*.js",
-    "svg": "svgr --icon --replace-attr-values \"#ffc107=currentColor\" -d src/draws/"
+    "lint": "eslint src/*.js"
   },
   "eslintConfig": {
     "extends": [
