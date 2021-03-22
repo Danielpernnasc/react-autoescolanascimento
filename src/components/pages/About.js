@@ -10,6 +10,8 @@ import Footer from "../organism/Footer";
 import Card, {CardMedia, CardMediaDescription } from "../atoms/Card";
 import BreadCrumb from "../atoms/BreadCrumb";
 
+import { useScrollToTop } from "../../Hooks/scroll";
+
 import HeroImage from "../../assets/hero.jpg";
 import AboutImage from "../../draws/Transito";
 import InstImage1 from "../../assets/instructors/instru1.jpg";
@@ -41,6 +43,7 @@ const instructors = [
 
 
 const About = () => {
+  useScrollToTop();
   return (
     <>
       <Hero image={HeroImage}>

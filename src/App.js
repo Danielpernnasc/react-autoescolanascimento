@@ -1,18 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ThemeProvider from "./styles/ThemeProvider";
 import GlobaSytle from "./styles/GlobalStyle";
-import Routes from "./routes";
 
-
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Product from './components/pages/ProductDetail';
 
 function App() {
   return (
     <ThemeProvider>
       <GlobaSytle />
       <Router>
-        <Routes/>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/Sobre" element={<About/>} />
+          <Route path="/Servicos" element={<Product/>} />
+        </Routes>
       </Router>
     </ThemeProvider>
   );
