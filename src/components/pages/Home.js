@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 
 import Hero from "../molecules/Hero";
@@ -112,7 +112,7 @@ const Home = () => (
             in.
           </p>
           <div>
-            <Button color="primary">Saiba Mais</Button>
+            <Button as={Link} to="/Sobre" color="primary">Saiba Mais</Button>
           </div>
         </div>
         <div>
@@ -122,6 +122,7 @@ const Home = () => (
             autoPlay
             loop
             muted
+            playsInline
             alt="Video by Ruvim Miksanskiy from Pexels"
           ></video>
         </div>
