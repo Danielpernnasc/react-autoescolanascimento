@@ -5,13 +5,13 @@ import styled from "styled-components";
 export const ButtonColors = {
   default: "default",
   primary: "primary",
-  danger: "danger"
+  danger: "danger",
 };
 
 export const ButtonsVariants = {
-  defatult: "default",
+  default: "default",
   outlined: "outlined",
-  link: "link"
+  link: "link",
 };
 
 const getMainColor = ({ theme, color }) => {
@@ -47,7 +47,7 @@ const getColorText = ({ theme, color }) => {
   }
 };
 
-const getOutlinedText = props => {
+const getOutlinedText = (props) => {
   if (props.color === ButtonColors.default) {
     return "#212121";
   }
@@ -55,10 +55,11 @@ const getOutlinedText = props => {
   return getMainColor(props);
 };
 
-const getLinkText = props => {
+const getLinkText = (props) => {
   if (props.color === ButtonColors.default) {
     return "#757575";
   }
+
   return getMainColor(props);
 };
 
@@ -68,12 +69,11 @@ const Button = styled.button`
   text-transform: uppercase;
   padding: 12px 36px;
   cursor: pointer;
-  background: ${getMainColor};
+  background-color: ${getMainColor};
   border: 2px solid ${getMainColor};
   color: ${getColorText};
   display: inline-block;
   text-decoration: none;
-
 
   &:disabled {
     opacity: 0.6;
@@ -83,10 +83,6 @@ const Button = styled.button`
   &:hover:not(:disabled) {
     background-color: ${getDarkColor};
     border: ${getDarkColor};
-  }
-
-  &:focus:enabled {
-    outline-style: none;
   }
 `;
 
@@ -108,14 +104,14 @@ const ButtonLink = styled(Button)`
   padding-left: 0;
   padding-right: 0;
 
-  &:hover:not(:disabled) {
+  &:hover:enabled {
     background-color: transparent;
     border-color: transparent;
     color: ${getDarkColor};
   }
 `;
 
-const ButtonWrapper = props => {
+const ButtonWrapper = (props) => {
   switch (props.variant) {
     case ButtonsVariants.outlined:
       return <ButtonOutlined {...props} />;
@@ -130,14 +126,14 @@ ButtonWrapper.defaultProps = {
   type: "button",
   children: undefined,
   color: "default",
-  variant: "default"
+  variant: "default",
 };
 
 ButtonWrapper.propTypes = {
   type: PropTypes.string,
   children: PropTypes.node,
   color: PropTypes.oneOf(Object.values(ButtonColors)),
-  variant: PropTypes.oneOf(Object.values(ButtonsVariants))
+  variant: PropTypes.oneOf(Object.values(ButtonsVariants)),
 };
 
 export default ButtonWrapper;

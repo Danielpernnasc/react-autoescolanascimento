@@ -8,7 +8,7 @@ exports[`renders with color danger 1`] = `
   text-transform: uppercase;
   padding: 12px 36px;
   cursor: pointer;
-  background: #ff3d00;
+  background-color: #ff3d00;
   border: 2px solid #ff3d00;
   color: #212121;
   display: inline-block;
@@ -24,10 +24,6 @@ exports[`renders with color danger 1`] = `
 .c0:hover:not(:disabled) {
   background-color: #b22a00;
   border: #b22a00;
-}
-
-.c0:focus:enabled {
-  outline-style: none;
 }
 
 <button
@@ -46,7 +42,7 @@ exports[`renders with color default 1`] = `
   text-transform: uppercase;
   padding: 12px 36px;
   cursor: pointer;
-  background: #e0e0e0;
+  background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
   display: inline-block;
@@ -62,10 +58,6 @@ exports[`renders with color default 1`] = `
 .c0:hover:not(:disabled) {
   background-color: #5a6268;
   border: #5a6268;
-}
-
-.c0:focus:enabled {
-  outline-style: none;
 }
 
 <button
@@ -84,7 +76,7 @@ exports[`renders with color primary 1`] = `
   text-transform: uppercase;
   padding: 12px 36px;
   cursor: pointer;
-  background: #ffc107;
+  background-color: #ffc107;
   border: 2px solid #ffc107;
   color: #212121;
   display: inline-block;
@@ -100,10 +92,6 @@ exports[`renders with color primary 1`] = `
 .c0:hover:not(:disabled) {
   background-color: #c79100;
   border: #c79100;
-}
-
-.c0:focus:enabled {
-  outline-style: none;
 }
 
 <button
@@ -122,7 +110,7 @@ exports[`renders with color primary and link 1`] = `
   text-transform: uppercase;
   padding: 12px 36px;
   cursor: pointer;
-  background: #ffc107;
+  background-color: #ffc107;
   border: 2px solid #ffc107;
   color: #212121;
   display: inline-block;
@@ -138,10 +126,6 @@ exports[`renders with color primary and link 1`] = `
 .c0:hover:not(:disabled) {
   background-color: #c79100;
   border: #c79100;
-}
-
-.c0:focus:enabled {
-  outline-style: none;
 }
 
 <button
@@ -160,7 +144,7 @@ exports[`renders with color primay and variant outlined 1`] = `
   text-transform: uppercase;
   padding: 12px 36px;
   cursor: pointer;
-  background: #ffc107;
+  background-color: #ffc107;
   border: 2px solid #ffc107;
   color: #212121;
   display: inline-block;
@@ -176,10 +160,6 @@ exports[`renders with color primay and variant outlined 1`] = `
 .c0:hover:not(:disabled) {
   background-color: #c79100;
   border: #c79100;
-}
-
-.c0:focus:enabled {
-  outline-style: none;
 }
 
 <button
@@ -198,7 +178,7 @@ exports[`renders with variants default 1`] = `
   text-transform: uppercase;
   padding: 12px 36px;
   cursor: pointer;
-  background: #e0e0e0;
+  background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
   display: inline-block;
@@ -214,10 +194,6 @@ exports[`renders with variants default 1`] = `
 .c0:hover:not(:disabled) {
   background-color: #5a6268;
   border: #5a6268;
-}
-
-.c0:focus:enabled {
-  outline-style: none;
 }
 
 <button
@@ -236,7 +212,7 @@ exports[`renders with variants link 1`] = `
   text-transform: uppercase;
   padding: 12px 36px;
   cursor: pointer;
-  background: #e0e0e0;
+  background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
   display: inline-block;
@@ -252,10 +228,6 @@ exports[`renders with variants link 1`] = `
 .c0:hover:not(:disabled) {
   background-color: #5a6268;
   border: #5a6268;
-}
-
-.c0:focus:enabled {
-  outline-style: none;
 }
 
 <button
@@ -274,7 +246,7 @@ exports[`renders with variants outlined 1`] = `
   text-transform: uppercase;
   padding: 12px 36px;
   cursor: pointer;
-  background: #e0e0e0;
+  background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
   display: inline-block;
@@ -290,10 +262,6 @@ exports[`renders with variants outlined 1`] = `
 .c0:hover:not(:disabled) {
   background-color: #5a6268;
   border: #5a6268;
-}
-
-.c0:focus:enabled {
-  outline-style: none;
 }
 
 <button
