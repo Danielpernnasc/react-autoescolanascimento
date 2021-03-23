@@ -9,8 +9,6 @@ import Section from "../molecules/Section";
 import Footer from "../organism/Footer";
 import BreadCrumb from "../atoms/BreadCrumb";
 
-import { useScrollToTop } from "../../Hooks/scroll";
-
 import HeroImage from "../../assets/hero.jpg"
 import  Callout, {
     CalloutMedia, 
@@ -38,9 +36,7 @@ const PinnedItem = styled.li`
 
 `;
 
-const ProductDetail = () => {
-    useScrollToTop();
-    return (
+const ProductDetail = () => (
     <>
     <Hero image={HeroImage}>
         <Heading>
@@ -93,7 +89,6 @@ const ProductDetail = () => {
     <Footer/>
     </>
 );
-}
 
 // ProductDetail.defaultProps = {};
 
