@@ -46,33 +46,31 @@ CardBody.propTypes = {
 
 //#endregion
 
-
 //#region CardMediaDescription
-const StyledMediaDescription = styled.div`
-background-color: rgba(0, 0, 0, 0.4);
-padding: 8px 16px;
-color: #fff;
-align-self: flex-end;
-flex: 1;
+  const StyledMediaDescription = styled.div`
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  color: #fff;
+  align-self: flex-end;
+  flex: 1;
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-`;
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  `;
 
-export const CardMediaDescription = ({ children }) => <StyledMediaDescription>{children}</StyledMediaDescription>;
+  export const CardMediaDescription = ({ children }) => <StyledMediaDescription>{children}</StyledMediaDescription>;
 
-CardMediaDescription.defaultProps = {
-image: undefined
-};
+  CardMediaDescription.defaultProps = {
+  image: undefined
+  };
 
-CardMediaDescription.propTypes = {
-children: PropTypes.node,
-};
+  CardMediaDescription.propTypes = {
+  children: PropTypes.node,
+  };
 
 
 //#endregion
-
 
 //#region Card
 
