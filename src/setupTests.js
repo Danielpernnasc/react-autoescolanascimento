@@ -5,5 +5,5 @@
 import "@testing-library/jest-dom";
 import "jest-styled-components";
 
-// window.scrollTop = jest.fn();
+window.scrollTop = jest.fn();
 
