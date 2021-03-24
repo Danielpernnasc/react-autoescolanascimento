@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import {FaIdCard, FaHome, FaScroll} from "react-icons/fa";
 
-import ProductType from "types/ProductType";
+import ProductType from "Models/types/ProductType";
 
 import Hero from "../molecules/Hero";
 import Heading from "../atoms/Heading";
@@ -11,7 +11,8 @@ import Section from "../molecules/Section";
 import Footer from "../organism/Footer";
 import BreadCrumb from "../atoms/BreadCrumb";
 
-import HeroImage from "../../assets/hero.jpg"
+// import HeroImage from "../../assets/hero.jpg"
+
 import  Callout, {
     CalloutMedia, 
     CalloutBody, 
@@ -40,14 +41,14 @@ const PinnedItem = styled.li`
 
 const ProductDetail = ( {product} ) => (
     <>
-    <Hero image={HeroImage}>
+    <Hero image={product.image}>
         <Heading>
             <h1>{product.title}</h1>
         </Heading>
         <BreadCrumb items={[
-              { label: "Início", link: "/" }, 
-              { label: "Serviço" },
-              { label: product.title}
+            { label: "Início", link: "/" }, 
+            { label: "Serviço" },
+            { label: product.title}
         ]}/>
     </Hero>
     <Section>

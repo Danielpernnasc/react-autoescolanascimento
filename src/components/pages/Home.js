@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 
-import ProductType from 'types/ProductType';
+import ProductType from 'Models/types/ProductType';
 
 import Hero from "../molecules/Hero";
 import Heading from "../atoms/Heading";
