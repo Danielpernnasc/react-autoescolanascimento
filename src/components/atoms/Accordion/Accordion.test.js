@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "../../test-utils";
+import { render, screen } from "test-utils";
 
 import Accordion from "./Accordion";
 import { fireEvent } from "@testing-library/dom";
