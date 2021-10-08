@@ -1,16 +1,17 @@
 import React from "react";
 
-import Callout,{CalloutBody, CalloutAction, CalloutMedia} from "./Callout";
+import Callout, { CalloutBody, CalloutAction, CalloutMedia } from "./Callout";
 import Button from "./Button";
 import SpeedImage from "../../draws/Speed";
 
+
 export default {
- title: "Components/Atoms/Callout",
- component: Callout,
- subcomponents: {CalloutBody, CalloutAction, CalloutMedia}
+    title: "Components/Atoms/Callout",
+    component: Callout,
+    subcomponents: { CalloutBody, CalloutAction, CalloutMedia }
 };
 
-export const usage = () => 
+export const usage = () =>
     <Callout>
         <CalloutBody>
             <h6>Faça sua matrícula agora mesmo</h6>
@@ -23,4 +24,4 @@ export const usage = () =>
             <SpeedImage />
         </CalloutMedia>
     </Callout>
-;
+    ;
